@@ -8,23 +8,23 @@
 </head>
 <body>
   <?php
-function scan($dir) {
-    if(is_dir($dir)) {
-        $files = scandir($dir);
-        unset($files[0], $files[1]);
-        natcasesort($files);
-        echo '<ul>';
-        foreach($files as $f) {
-            if(is_dir($dir.$f)) {
-                echo '<li class="folder">'.$f.'</li>';
-                echo '<ul class="tree">';
-                scan($dir.$f."/");
-                echo '</ul>';
+function arbo($dir) {                                   //on declare la fonction qui permet de recuperer l'arborescence du dossier
+    if(is_dir($dir)) {                                 // on vérifie que le dossier existe
+        $files = scandir($dir);                  // on stocke ds la variable files la liste des fichiers present dans le dossier
+        unset($files[0], $files[1]);          // on retire les points du tableaux
+        natcasesort($files);                                 // permet de classer les dossiers ds le tableau par nom
+        echo '<ul>';                                     
+        foreach($files as $f) {                          // pertmet de retirer les valeurs du tableau files ds la variable F      
+            if(is_dir($dir.$f)) {                        //on verifie que le chemin du dossier existe
+                echo '<li class="folder">'.$f.'</li>';           //on liste nos dossier
+                echo '<ul class="tree">';                          //liste les fichiers
+                arbo($dir.$f."/");                        // on appelle la fonction SCAN  pour pouvoir acceder au dossier
+                echo '</ul>';                              
             }
         }
-        echo '</ul>';
+        echo '</ul>';                              
         echo '<ul>';
-          foreach($files as $f) {
+          foreach($files as $f) {                                                     //on recupere et on affiche les sous dossier du haut
             if(is_file($dir.$f)) {
                 echo '<li class="file" rel="'.$dir.$f.'">'.$f.'</li>';
             }
@@ -32,7 +32,7 @@ function scan($dir) {
         echo '</ul>';
     }
 }
-scan('../');
+arbo('../');                                       // 
 ?>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script> 
