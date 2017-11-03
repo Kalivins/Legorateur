@@ -1,6 +1,7 @@
 <h1>Titre</h1>
 <?php
-function mkmap($dir){
+$directory = opendir("..");
+/*function mkmap($dir){
     echo "<ul>";   
     $folder = opendir ($dir);
    
@@ -18,4 +19,4 @@ function mkmap($dir){
 }
 ?>
 
-<?php mkmap('.'); ?>
+<?php mkmap(".."); ?>*/
