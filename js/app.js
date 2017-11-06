@@ -1,6 +1,6 @@
 $(document).ready(function($){
     $("ul.tree").hide();
-    $("li.folder").hover(function(){
+    $("li").hover(function(){
         $(this).each(function (){
             if(this.style.backgroundColor !== ""){
                 $(this).css("background", "");
@@ -12,4 +12,9 @@ $(document).ready(function($){
     $("li.folder").dblclick(function () {
         $(this).next("ul").toggle("fast");
     });
+    $.get("index.php", function(data) {
+   var response = [data];
+        return response;
+   
+});
 });
