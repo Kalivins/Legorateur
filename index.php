@@ -26,7 +26,8 @@ function arbo($dir) {                                   //On declare la fonction
         echo '<ul>';
           foreach($files as $f) {                                                     //on recupere et on affiche les sous dossier du haut
             if(is_file($dir.$f)) {
-                echo '<li class="file" rel="'.$dir.$f.'">'.$f.'</li>';
+                echo '<li class="file" rel="'.$dir.$f.'">'.$f.'<a href="'.$dir.$f.'"
+   download="'.$dir.$f.'">Télécharger</a> <a href="'.$dir.$f.'">Ouvrir</a> </li>';
             }
         }
         echo '</ul>';
