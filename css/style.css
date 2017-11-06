@@ -65,6 +65,13 @@ header{
   padding-bottom: 50px;  
 }
 
+.folder{
+    background-image: url(../images/folder-1.svg);
+}
+.file{
+    background-image: url(../images/files1.svg);
+}
+
 
 /*footer*/
 footer{  

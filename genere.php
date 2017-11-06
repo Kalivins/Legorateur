@@ -9,9 +9,14 @@
                    "filename" => $files->getfilename(),
                    "pathname" => $files->getpathname(),
                    "type" => $files->gettype(),
-                   "isDir" => $files->is_dir(),
-                   "isFile" => $files->is_file(),
-               ]
+                   "isDirectory" => $files->isdir(),
+                   "isFile" => $files->isfile(),
+               ];
+            header('Content-type: application/json');
+
+            echo json_encode($arbo);
             }
-}                                      
+        
+}
+generate("../");
 ?>
