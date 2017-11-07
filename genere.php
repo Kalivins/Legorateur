@@ -1,10 +1,12 @@
 <?php   
         //On récupère les dossiers/fichiers et leurs infos
-        foreach($files = new DirectoryIterator("../") as $f) {                                
+        $dir = "../";
+        foreach($files = new DirectoryIterator($dir) as $f) {                                
                if($f->isDot()) continue;                              
                $arbo[] = [
                    "filename" => $f->getfilename(),
                    "pathname" => $f->getpathname(),
+                   "path" => $dir,
                    "type" => $f->gettype(),
                    "extension" => $f->getextension(),
                    "isDirectory" => $f->isdir(),

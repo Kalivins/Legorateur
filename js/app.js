@@ -4,7 +4,7 @@ $(document).ready(function($){
         url: "genere.php",
         type: "post",
         dataType: "json",
-        success: function generation (data, path){
+        success: function generation (data){
             console.log(data[5]);
             $(".explore").append('<ul class="row test"></ul>');
             data.forEach(function (index){
@@ -27,8 +27,8 @@ $(document).ready(function($){
     });
             $(".item").click(function(){
                 var path = $(".item").attr("data");
-                $(".item").empty();
-                generation(path);
+                $(".explore").empty();
+                generation(this);
                 });
             }
         });
