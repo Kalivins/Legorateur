@@ -9,7 +9,7 @@ $(document).ready(function($){
             $(".explore").append('<ul class="row test"></ul>');
             data.forEach(function (index){
             if(index.isDirectory){
-             $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder item'><img src='images/folder-1.svg'><li class='folder'>"+index.filename+"</li></div>");   
+             $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder item'><img src='images/folder-1.svg'><li>"+index.filename+"</li></div>");   
             } 
             
             if(index.isFile){
@@ -26,7 +26,7 @@ $(document).ready(function($){
         });
     });
             $(".item").click(function(){
-                var path = $(".item").attr("data");
+                var path = $(this).attr("data");
                 $(".explore").empty();
                 generation(this);
                 });
