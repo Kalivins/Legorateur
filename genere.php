@@ -7,12 +7,10 @@
           } else {
             $dir = $_POST['toinou'];
           }
-          else{
+            
+          } else{
             $dir="../";
-          }
-
         }
-        $dir = "../";
         foreach($files = new DirectoryIterator($dir) as $f) {                                
                if($f->isDot()) continue;                              
                $arbo[] = [

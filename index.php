@@ -10,35 +10,54 @@
 </head>
 
 <body>
-    <main>
-        <header class="container-fluid">
-        </header>
+	<header class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-left">
+					<img class="logo" src="images/legorateurC.svg" alt="logo">
+				</div>
+				<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+					<img class="titre" src="images/logotexte.png" alt="Legorateur">
+				</div>
+			</div>
+		</div>
+	</header>
 
-        <section class="chemin container-fluid">
-            <div class="container arborescence">
-                <p class='arbo'></p>
-                
-            </div>
-        </section>
 
-        <section class="result container-fluid">
-            <div class="container explore">
-        
-            </div>
-        </section>
-        <footer class="container-fluid">
-            <div class="container">
-                <h2 class="text-center">Créer par</h2>
-                <div class="crea">
-                    <img class="createur" src="images/toinou.png" alt="Antoine">
-                    <img class="createur" src="images/kev1.png" alt="Antoine">
-                    <img class="createur" src="images/roro.png" alt="Antoine">
-                    <img class="createur" src="images/lily.png" alt="Antoine">
-                </div>
-                <p class="fonticon text-center">Icone télécharger sur le site FLATICON</p>
-            </div>
-        </footer>
-    </main>
+	<main class="container-fluid">
+		<div class="container">
+		<div class="row explore"></div>
+	</div>
+	</main>
+
+
+	<footer class="foot container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 crea">
+					<img src="images/rom.svg">
+					<figcaption>Roro</figcaption>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 crea">
+					<img src="images/toin.svg">
+					<figcaption>Toinou</figcaption>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 crea">
+					<img src="images/lilyh.svg"><figcaption>Lily</figcaption>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 crea">
+					<img src="images/kev.svg">
+					<figcaption>Kev1</figcaption>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<p class="merci text-center">Icônes télécharger depuis le site FLATICON</p>
+				</div>
+			</div>
+		</div>
+	</footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
