@@ -1,10 +1,14 @@
 $(document).ready(function($){
+    generation();
+});
+    function generation(path = ""){
     $.ajax({
-        
         url: "genere.php",
         type: "post",
         dataType: "json",
-        success: function generation (data){
+        data: {toinou: path},
+
+        success: function (data){
             console.log(data[5]);
             $(".explore").append('<ul class="row test"></ul>');
             data.forEach(function (index){
@@ -26,10 +30,24 @@ $(document).ready(function($){
         });
     });
             $(".item").click(function(){
+
+                var name = $(this).text();
+                var link = $(this).attr("data");
+
+                console.log(link);
+                console.log(name);
+
                 var path = $(this).attr("data");
-                $(".explore").empty();
-                generation(this);
+
+              $(".arbo").append( "<a> retour </a> → <a href= " + link + " > " + name + " </a>")
+
+               $(".explore").empty();
+               generation(path);
+                
+
+
+                
                 });
             }
         });
-});
+}

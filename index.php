@@ -15,8 +15,9 @@
         </header>
 
         <section class="chemin container-fluid">
-            <div class="container">
-                <p>Chemin donnée par php</p>
+            <div class="container arborescence">
+                <p class='arbo'></p>
+                
             </div>
         </section>
 
