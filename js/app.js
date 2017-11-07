@@ -1,22 +1,35 @@
 $(document).ready(function($){
-    $("li").hover(function(){
+    $.ajax({
+        
+        url: "genere.php",
+        type: "post",
+        dataType: "json",
+        success: function generation (data, path){
+            console.log(data[5]);
+            $(".explore").append('<ul class="row test"></ul>');
+            data.forEach(function (index){
+            if(index.isDirectory){
+             $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder item'><img src='images/folder-1.svg'><li class='folder'>"+index.filename+"</li></div>");   
+            } 
+            
+            if(index.isFile){
+                $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder item'><img src='images/files1.svg'><li class='file'>"+index.filename+"</li><br><a href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a href='"+index.pathname+"'>Ouvrir</a></div>");
+            }
+        });
+             $(".item").hover(function(){
         $(this).each(function (){
             if(this.style.backgroundColor !== ""){
                 $(this).css("background", "");
             } else {
-                $(this).css("background", "grey");
+                $(this).css("background", "lightgray");
             }
         });
     });
-    $.post("genere.php", function genere (data) {
-   var arbo = data;
-        $("ul").appendTo(".container").addClass('test'); 
-        arbo.each(function (){
-            if(this.isDirectory){
-             $("<li><a data='"+this.pathname+"'>"+this.filename+"</a></li>").appendTo(".test").addClass('folder');   
-            } if(this.isFile){
-                $("<li>"+this.filename+"</li><a href='"+this.pathname+"' download='"+this.filename+"'>Télécharger</a> <a href='"+this.pathname+"'>Ouvrir</a>").appendTo(".test").addClass('file');
+            $(".item").click(function(){
+                var path = $(".item").attr("data");
+                $(".item").empty();
+                generation(path);
+                });
             }
         });
-});
 });

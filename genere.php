@@ -1,22 +1,16 @@
-<?php
-    function generate($dir){
-        $files = new DirectoryIterator($dir);
-        
+<?php   
         //On récupère les dossiers/fichiers et leurs infos
-        foreach($files as $f) {                                
+        foreach($files = new DirectoryIterator("../") as $f) {                                
                if($f->isDot()) continue;                              
-               $arbo = [
-                   "filename" => $files->getfilename(),
-                   "pathname" => $files->getpathname(),
-                   "type" => $files->gettype(),
-                   "isDirectory" => $files->isdir(),
-                   "isFile" => $files->isfile(),
+               $arbo[] = [
+                   "filename" => $f->getfilename(),
+                   "pathname" => $f->getpathname(),
+                   "type" => $f->gettype(),
+                   "extension" => $f->getextension(),
+                   "isDirectory" => $f->isdir(),
+                   "isFile" => $f->isfile(),
                ];
             header('Content-type: application/json');
-
-            echo json_encode($arbo);
-            }
-        
-}
-generate("../");
+        }
+echo json_encode($arbo);
 ?>
