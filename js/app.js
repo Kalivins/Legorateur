@@ -13,11 +13,11 @@ $(document).ready(function($){
             $(".explore").append('<ul class="row test"></ul>');
             data.forEach(function (index){
             if(index.isDirectory){
-             $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder item'><img src='images/folder-1.svg'><li>"+index.filename+"</li></div>");   
+             $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder item'><img src='images/folderR.svg'><li>"+index.filename+"</li></div>");   
             } 
             
             if(index.isFile){
-                $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder itemF'><img src='images/files1.svg'><li class='file'>"+index.filename+"</li><br><a href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a href='"+index.pathname+"'>Ouvrir</a></div>");
+                $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 folder itemF'><img class='sv' src='images/fileR.svg'><p class='extension'>"+index.extension+"</p><li class='file'>"+index.filename+"</li><br><a href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a href='"+index.pathname+"'>Ouvrir</a></div>");
             }
         });
              $(".item").hover(function(){
@@ -47,9 +47,6 @@ $(document).ready(function($){
 
                $(".explore").empty();
                generation(path);
-                
-
-
                 
                 });
             }

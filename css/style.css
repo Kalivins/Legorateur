@@ -11,6 +11,26 @@
 /*generalite*/
 .folder{ 
   cursor: pointer;
+  margin-right: 30px;
+}
+.folder img{
+    width: 200px;
+    height: 150px;
+}
+.folder p{
+    padding: 0;
+    margin: 0;
+}
+.extension{
+    position: absolute;
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+    bottom: 50%;
+    left: 50%;
+}
+.sv{
+    position: relative;
 }
 
 body{
