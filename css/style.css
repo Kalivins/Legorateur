@@ -14,9 +14,6 @@
 }
 /*generalite*/
 .folder{
-  width: 150px;
-  height: 150px;
-  display: inline-block;
   margin-right: 70px; 
   cursor: pointer;
 }
