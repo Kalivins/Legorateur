@@ -1,3 +1,4 @@
+/*Police personnalisé*/
 @font-face{
 	font-family: 'NuniBI'; 
 	src: url('../fonts/NunitoSans-BlackItalic.ttf');
@@ -8,59 +9,40 @@
 	src: url('../fonts/NunitoSans-LightItalic.ttf');
 }
 
-/*generalite*/
-.folder{ 
-  cursor: pointer;
-  margin-right: 30px;
-  margin-bottom: 20px;
-  display: none;
+/*Généralité*/
+.btn-danger{
+	width: 100%;
+	margin-top: 10px;
 }
 
-.folder img{
-    width: 150px;
-    height: 150px;
-}
-.folder p{
-    padding: 0;
-    margin: 0;
-}
-.folder a{
-    margin: 0;
-    padding: 0;
-}
-.extension{
-    position: absolute;
-    color: red;
-    font-size: 26px;
-    font-weight: bold;
-    bottom: 50%;
-    left: 50%;
-}
-.liens_invisible
-{
-color: transparent;
-}
-.liens_invisible:hover
-{
-color: transparent;
-} 
-.sv{
-    position: relative;
-}
 
 body{
 	margin: 0px; 
 	font-family: 'NuniLI';
 	font-size: 1.5em;  
 }
+
 ul li {
     list-style: none;
+    width: 100%; 
 }
+
+main{
+	padding-top: 40px; 
+	padding-bottom: 40px; 
+}
+
+/*Header*/
+.logo{
+	width: 50%; 
+}
+
 header{
 	height: 120px; 
 	background-color: #d72222; 
 }
 
+/*Footer*/
 footer img{
 	width: 100px; 
 	height: 100px; 
@@ -71,15 +53,6 @@ footer{
 	padding-top: 20px; 
 }
 
-.titre{
-	width: 50%; 
-	padding-top: 20px; 
-}
-
-.logo{
-	width: 50%; 
-}
-
 .crea{
 	display: flex;
 	align-items: center;
@@ -87,13 +60,44 @@ footer{
 	font-size: 1.5em; 
 }
 
-main{
-	padding-top: 40px; 
-	padding-bottom: 40px; 
+.titre{
+	width: 50%; 
+	padding-top: 20px; 
 }
 
 .merci{
 	padding-top: 20px; 
+}
+
+/*Dossier Fichier*/
+.folder{ 
+  cursor: pointer;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.itemF{
+	padding: 20px;
+}
+
+.file img{
+    width:150px;
+    height: 110px;
+}
+
+.folder img{
+    width: 200px;
+    height: 140px;
+}
+
+.folder p{
+    padding: 0;
+    margin: 0;
+}
+
+.d{
+    margin-left: 20px; 
 }
 
 /* Animate CSS */

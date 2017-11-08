@@ -24,5 +24,18 @@
                ];
             header('Content-type: application/json');
         }
-echo json_encode($arbo);
+        // Trier les résultat dossier fichiers
+        $folders = []; //Créer un tableau pour mettre les dossiers
+        $files = []; //Créer un tableau pour mettre les fichiers
+        foreach($arbo as $file){
+            if($file["type"] == "dir"){
+              $folders[]=$file;              //Pour chaque fichiers ou dossier scanner on regarde leur type
+            }else {                          //Et on les classes dans le tableau correspondant
+              $files[]=$file;
+            }
+        }
+
+  $final=array_merge($folders, $files);  //On merge les tableaux pour que les dossiers apparaissent en premier, et ensuite les fichiers 
+
+echo json_encode($final);
 ?>
