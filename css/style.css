@@ -32,6 +32,9 @@ main{
 	padding-bottom: 40px; 
 }
 
+#retour img{
+    width: 5%;
+}
 /*Header*/
 .logo{
 	width: 50%; 

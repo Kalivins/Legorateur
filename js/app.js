@@ -13,7 +13,7 @@ $(document).ready(function($){
                 var lastPath = pathBack.pop();
                 var link = pathBack.join('/');
                 console.log(link);
-                $('.explore').append("<a class='back btn btn-default' role='button' data='"+link+"'>Retour</a>");
+                $('.explore').append("<a class='back btn btn-default' role='button' data='"+link+"'><img src='images/left-arrow.svg' width='20' height='20'> Retour</a>");
                  
             }
             $(".explore").append('<ul class="row test"></ul>');
