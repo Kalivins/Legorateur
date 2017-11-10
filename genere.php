@@ -17,6 +17,7 @@
                    "filename" => $f->getfilename(),
                    "pathname" => $f->getpathname(),
                    "path" => $dir,
+                   "size" => human_filesize($f->getsize()),
                    "type" => $f->gettype(),
                    "extension" => $f->getextension(),
                    "isDirectory" => $f->isdir(),
@@ -37,5 +38,10 @@
 
   $final=array_merge($folders, $files);  //On merge les tableaux pour que les dossiers apparaissent en premier, et ensuite les fichiers 
 
+function human_filesize($bytes, $decimals = 2) {
+    $size = array('B','kB','MB','GB','TB','PB','EB','ZB','YB');
+    $factor = floor((strlen($bytes) - 1) / 3);
+    return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$size[$factor];
+}
 echo json_encode($final);
 ?>

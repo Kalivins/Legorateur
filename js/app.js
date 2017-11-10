@@ -25,60 +25,61 @@ $(document).ready(function($){
             
          if(index.isFile){
               if(index.extension == 'php'){
-                $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv text-center' src='images/svg/php.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a><a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+                $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv text-center' src='images/svg/php.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a><a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
             }
 
             if(index.extension == 'ai'){
-              $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/ai.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+              $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/ai.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
             if(index.extension == 'html'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/html.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/html.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
             if(index.extension == 'css'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/css.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/css.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
             if(index.extension == 'js'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/js.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/js.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
             if(index.extension == 'ico'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file  itemF'><img class='sv' src='images/svg/ico.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button'href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a><a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file  itemF'><img class='sv' src='images/svg/ico.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button'href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a><a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
             if(index.extension == 'jpg'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/jpg.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/jpg.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
           if(index.extension == 'svg'){
-          $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/svg.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+          $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/svg.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
         }
 
           if(index.extension == 'txt'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/txt.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/txt.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
           if(index.extension == 'ttf'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/ttf.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/ttf.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
           if(index.extension == 'psd'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/psd.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/psd.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
           if(index.extension == 'pdf'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/pdf.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/pdf.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a class='btn btn-danger' role='button' href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
           if(index.extension == 'mdt'){
-            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/mdt.svg'><li class='file text-center'>"+index.filename+"</li><br><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a  class='btn btn-danger' role='button'href='"+index.pathname+"'>Ouvrir</a></div>");
+            $(".test").append("<div data='"+index.pathname+"' class='col-md-2 col-lg-2 file itemF'><img class='sv' src='images/svg/mdt.svg'><li class='file text-center'>"+index.filename+"<br>"+index.size+"</li><a class='btn btn-danger' role='button' href='"+index.pathname+"' download='"+index.filename+"'>Télécharger</a> <a  class='btn btn-danger' role='button'href='"+index.pathname+"'>Ouvrir</a></div>");
           }
 
       }
         });
             $('.folder').fadeIn(500);
+            $(".file").fadeIn(500);
              $(".item").hover(function(){
         $(this).each(function (){
             if(this.style.backgroundColor !== ""){
