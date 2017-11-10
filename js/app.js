@@ -8,13 +8,14 @@ $(document).ready(function($){
         dataType: "json",
         data: {toinou: path},
         success: function (data){
-             if(!path == "") {
+             if(path == "" || path == "..") {
+                 $('.explore').html('');
+            } else {
                 var pathBack = path.split("\\");
                 var lastPath = pathBack.pop();
                 var link = pathBack.join('/');
                 console.log(link);
                 $('.explore').append("<a class='back btn btn-default' role='button' data='"+link+"'><img src='images/left-arrow.svg' width='20' height='20'> Retour</a>");
-                 
             }
             $(".explore").append('<ul class="row test"></ul>');
             data.forEach(function (index){
